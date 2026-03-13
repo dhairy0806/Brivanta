@@ -49,7 +49,7 @@ class BrivantaChatbot {
 
     async getAIResponse(message) {
         // Using xAI Grok API (replace with your API key)
-        const API_KEY = 'YOUR_XAI_API_KEY_HERE'; // Get from https://console.x.ai/
+        const API_KEY = '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'; // Get from https://console.x.ai/
         
         const response = await fetch('https://api.x.ai/v1/chat/completions', {
             method: 'POST',
@@ -148,4 +148,5 @@ class BrivantaChatbot {
 // Initialize chatbot when page loads
 document.addEventListener('DOMContentLoaded', () => {
     new BrivantaChatbot();
+
 });
