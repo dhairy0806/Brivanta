@@ -55,10 +55,12 @@ class BrivantaChatbot {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${API_KEY}`
+                'Authorization': `Bearer ${API_KEY}`,
+                 'HTTP-Referer': 'https://dhairy0806.github.io',
+    'X-Title': 'Brivanta'
             },
             body: JSON.stringify({
-                model: 'openrouter/free',
+                model: 'deepseek/deepseek-chat:free',
                 messages: [
                     {
                         role: 'system',
@@ -150,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new BrivantaChatbot();
 
 });
+
 
 
 
