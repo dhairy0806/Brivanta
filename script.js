@@ -51,14 +51,14 @@ class BrivantaChatbot {
         // Using xAI Grok API (replace with your API key)
         const API_KEY = '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'; // Get from https://console.x.ai/
         
-        const response = await fetch('https://api.x.ai/v1/chat/completions', {
+        const response = await fetch('openrouter.ai/api/v1/chat/completions', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${API_KEY}`
             },
             body: JSON.stringify({
-                model: 'grok-beta',
+                model: 'deepseek/deepseek-chat:free',
                 messages: [
                     {
                         role: 'system',
@@ -150,3 +150,4 @@ document.addEventListener('DOMContentLoaded', () => {
     new BrivantaChatbot();
 
 });
+
