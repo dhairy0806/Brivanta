@@ -58,7 +58,7 @@ class BrivantaChatbot {
                 'Authorization': `Bearer ${API_KEY}`
             },
             body: JSON.stringify({
-                model: 'deepseek/deepseek-chat:free',
+                model: 'openrouter/free',
                 messages: [
                     {
                         role: 'system',
@@ -150,4 +150,5 @@ document.addEventListener('DOMContentLoaded', () => {
     new BrivantaChatbot();
 
 });
+
 
